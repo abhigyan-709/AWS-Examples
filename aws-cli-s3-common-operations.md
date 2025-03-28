@@ -45,3 +45,33 @@ aws s3 <press-enter>
 ```
 
 3. Now we will see how we can create the bucket in the AWS CLI
+```bash
+there is always a suggestion to create the aws s3 bucket through the AWS S3 Boto3 module of python or AWS CDK
+```
+
+4. Uploading the file from AWS CLI to the aws s3 bucket
+```bash
+aws s3 cp /path/of/local/file.ext s3://<your-bucket-name>/folder/<file-name>
+```
+
+5. In the same way you can use the other commands like rm (remove command, you can add -recursive, and it will remove all ojects inside the bucket recursively)
+```bash
+aws s3 rm s3://your-bucket/ --recursive
+```
+
+ 6. Removing the bucket if its empty 
+ ```bash 
+ aws s3 rb s3://bucket-name # make sure the bucke is empty otherwise it will throw and error
+ ```
+
+7. You can also use the aws s3api for the further interaction with the AWS CLI S3 operations
+```bash
+aws s3api and press enter and you can see a lot more options by auto prompter
+
+aws s3api create-bucket --bucket demo-project-devops-s3 --region us-east-1
+# more options are there to create the aws s3 bucket from the aws cli
+```
+
+8. You can use the aws s3api also to perform more advance actions and it gives you the output in the json format
+
+
