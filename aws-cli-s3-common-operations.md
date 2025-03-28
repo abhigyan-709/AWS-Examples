@@ -74,4 +74,19 @@ aws s3api create-bucket --bucket demo-project-devops-s3 --region us-east-1
 
 8. You can use the aws s3api also to perform more advance actions and it gives you the output in the json format
 
+9. Try the below points from your side by using the aws s3api
+    - copy the objects from your local machine to the bucket 
+    - delete the object from the bucket 
+    - empty the bucket 
+    - remove the bucket 
+    - copy the file from your bucket to the local system. hint: think of API and then some CRUD Operations
+
+
+```bash
+aws sapi get-object --bucket BUCKET_NAME --key OBJECT_KEY LOCAL_FILE_PATH
+```
+
+10. You can and must use some of the basic commands from your own and of course you can refer the commands documentation above attached with the link of AWS.
+
+
 
