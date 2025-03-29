@@ -17,7 +17,7 @@ vpc.create_tags(
     Tags = [
         {
             "Key" : "Name",
-            "Value" : "DemoVPC"
+            "Value" : "ProjectDevOpsDemoVPC"
         }
     ]
 )
