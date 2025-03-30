@@ -8,3 +8,6 @@ fi
 # we will delete the bucket with the specified name
 aws s3api delete-bucket --bucket $1 --region us-east-1
 
+# the following command deletes an object from the bucket 
+aws s3api delete-objects --bucket my-bucket --delete file://delete.json
+
