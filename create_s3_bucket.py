@@ -35,36 +35,36 @@ options available for the acl
 4. 'authenticated-read'
 """
 
-acl = "private"
-s3_client.put_bucket_acl(Bucket=bucket_name, ACL=acl)
+# acl = "private"
+# s3_client.put_bucket_acl(Bucket=bucket_name, ACL=acl)
 
-print(f"ACL '{acl}' is now set for the bucket {bucket_name}.")
+# print(f"ACL '{acl}' is now set for the bucket {bucket_name}.")
 
 
 # below commands and code are optionals to create with the s3.
 # enanle server side encryption
-s3_client.put_bucket_encryption(
-    Bucket = bucket_name,
-    ServerSideEncryptionCofiguration={
-        'Rules': [{
-            'ApplyServerSideEncryptionByDefault': {
-                'SSEAlgorithm' : 'AES256' # or AWS:KMS
-            }
-        }]
-    }
-)
+# s3_client.put_bucket_encryption(
+#     Bucket = bucket_name,
+#     ServerSideEncryptionCofiguration={
+#         'Rules': [{
+#             'ApplyServerSideEncryptionByDefault': {
+#                 'SSEAlgorithm' : 'AES256' # or AWS:KMS
+#             }
+#         }]
+#     }
+# )
 
-print(f"Encyption is enabled for the bucket {bucket_name}.")
+# print(f"Encyption is enabled for the bucket {bucket_name}.")
 
-# also the below commands are optionals, but these may be needed according to your usages
-s3_client.put_public.access_block(
-    Bucket = bucket_name,
-    PublicAccessBlockConfiguration={
-        'BlockPublicAcls' : True,
-        'IgnorePublicAcls' : True,
-        'BlockPublicPolicy' : True,
-        'RestrictPublicBuckets' : True
-    }
-)
+# # also the below commands are optionals, but these may be needed according to your usages
+# s3_client.put_public.access_block(
+#     Bucket = bucket_name,
+#     PublicAccessBlockConfiguration={
+#         'BlockPublicAcls' : True,
+#         'IgnorePublicAcls' : True,
+#         'BlockPublicPolicy' : True,
+#         'RestrictPublicBuckets' : True
+#     }
+# )
 
-print(f"Public Access blocked for the bucket {bucket_name}")
+# print(f"Public Access blocked for the bucket {bucket_name}")
