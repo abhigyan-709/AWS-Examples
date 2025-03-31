@@ -7,3 +7,4 @@ DELETE_VPC=$(
 echo "VPC is deleted"
 echo $DELETE_VPC
 
+# thers is another way in which we can assign the vpc id via cli as an argument when we are going to run it as the bash shel

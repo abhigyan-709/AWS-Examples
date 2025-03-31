@@ -24,5 +24,27 @@ VPC is having major core components as described below
 ## Key features of the VPC
 - VPC's are region specific, and they dont span regions
 - you can use VPC peering to connect to the other VPC 
+- also the vpc is used to create an isolated network and system which is more secure.
+- you can create upto 5 vpc per region 
+- every region comes with default VPC
+- you can have 200 subnets per vpc
+- upto 5 IPv4 can be attached to the CiDR Block and its adjustable to 50 and the same for the IPv6
+- Most of the vpc componets cont nothing
+    - VPC, Subnets, Route Table, IGW, VPC peering, NACL's and Security Groups
+- some of the component in the VPC is chargable
+    - VPC Endpoints
+    - VPN gateway 
+    - customer gateway
+    - IPv4 Address, Elastice IP, DNS Hostanames
 
-AWS_CLI_AUTO_PROMPT=on-partial
+
+## key points to remember to perform VPC actions
+- vpc cidr block should be unique in every region, they should not clash with the same vpc cidr block in the same region
+- vpc can be created by following methods
+    - AWS Console
+    - AWS CLI 
+    - AWS SDK or CDK with scripting with bash or with python
+    - IaC with terraform or AWS Cloudformation 
+
+    
+
